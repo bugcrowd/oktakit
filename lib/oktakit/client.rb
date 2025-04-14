@@ -7,6 +7,8 @@ require 'oktakit/client/factors'
 require 'oktakit/client/groups'
 require 'oktakit/client/group_rules'
 require 'oktakit/client/identity_providers'
+require 'oktakit/client/policies'
+require 'oktakit/client/policy_rules'
 require 'oktakit/client/schemas'
 require 'oktakit/client/templates'
 require 'oktakit/client/users'
@@ -20,6 +22,8 @@ module Oktakit
     include Groups
     include GroupRules
     include IdentityProviders
+    include Policies
+    include PolicyRules
     include Schemas
     include Templates
     include Users

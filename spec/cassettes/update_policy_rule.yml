@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules/0prlm2qutASDFisG01d7
+    body:
+      encoding: UTF-8
+      string: '{"name":"Test API routing rule","priority":1,"status":"ACTIVE","conditions":{"network":{"connection":"ANYWHERE"},"userIdentifier":{"patterns":[{"matchType":"SUFFIX","value":"example.com"},{"matchType":"SUFFIX","value":"example2.com"}],"type":"IDENTIFIER"},"app":{"include":[{"type":"APP","id":"0oaiticqweogdjWS21d7"}]}},"actions":{"idp":{"providers":[{"type":"SAML2","id":"0oalcyu12qB0shVqa1d7"}],"idpSelectionType":"SPECIFIC"}},"system":false,"type":"IDP_DISCOVERY"}'
+    headers:
+      User-Agent:
+      - Oktakit v1.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - SSWS <<ACCESS_TOKEN>>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 14 Apr 2025 04:16:56 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      vary:
+      - Accept-Encoding
+      x-okta-request-id:
+      - 8de69e0b0d3e80bffb5321f03ce1c502
+      x-xss-protection:
+      - '0'
+      p3p:
+      - CP="HONK"
+      x-rate-limit-limit:
+      - '500'
+      x-rate-limit-remaining:
+      - '499'
+      x-rate-limit-reset:
+      - '1744604276'
+      cache-control:
+      - no-cache, no-store
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      accept-ch:
+      - Sec-CH-UA-Platform-Version
+      x-content-type-options:
+      - nosniff
+      strict-transport-security:
+      - max-age=315360000; includeSubDomains
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"id":"0prlm2qutASDFisG01d7","status":"ACTIVE","name":"Test API routing
+        rule","priority":1,"created":"2025-04-14T04:05:31.000Z","lastUpdated":"2025-04-14T04:16:56.000Z","system":false,"conditions":{"network":{"connection":"ANYWHERE"},"userIdentifier":{"patterns":[{"matchType":"SUFFIX","value":"example.com"},{"matchType":"SUFFIX","value":"example2.com"}],"type":"IDENTIFIER"},"app":{"include":[{"type":"APP","name":null,"id":"0oaiticqweogdjWS21d7"}],"exclude":[]}},"actions":{"idp":{"providers":[{"id":"0oalcyu12qB0shVqa1d7","name":"5c3fb2b5-edd9-4e8e-a840-2f57cdc2945e","type":"SAML2"}],"idpSelectionType":"SPECIFIC"}},"_links":{"self":{"href":"https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules/0prlm2qutASDFisG01d7","hints":{"allow":["GET","PUT","DELETE"]}},"deactivate":{"href":"https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules/0prlm2qutASDFisG01d7/lifecycle/deactivate","hints":{"allow":["POST"]}}},"type":"IDP_DISCOVERY"}'
+  recorded_at: Mon, 14 Apr 2025 04:16:56 GMT
+recorded_with: VCR 6.0.0
