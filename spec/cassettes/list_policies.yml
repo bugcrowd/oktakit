@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://okta-test.okta.com/api/v1/policies?type=IDP_DISCOVERY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Oktakit v1.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - SSWS <<ACCESS_TOKEN>>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 11 Apr 2025 03:48:15 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      vary:
+      - Accept-Encoding
+      x-okta-request-id:
+      - acaeca81d6cb202a052cae853c89c13d
+      x-xss-protection:
+      - '0'
+      p3p:
+      - CP="HONK"
+      x-rate-limit-limit:
+      - '500'
+      x-rate-limit-remaining:
+      - '499'
+      x-rate-limit-reset:
+      - '1744343355'
+      cache-control:
+      - no-cache, no-store
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      accept-ch:
+      - Sec-CH-UA-Platform-Version
+      link:
+      - <https://okta-test.okta.com/api/v1/policies?type=IDP_DISCOVERY>;
+        rel="self"
+      x-content-type-options:
+      - nosniff
+      strict-transport-security:
+      - max-age=315360000; includeSubDomains
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"id":"00pijwtasdfz4JsuA1d7","status":"ACTIVE","name":"Idp Discovery
+        Policy","description":"The default IdP Discovery Policy","priority":1,"system":true,"conditions":null,"created":"2024-11-21T22:32:22.000Z","lastUpdated":"2024-11-21T22:32:22.000Z","_links":{"self":{"href":"https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7","hints":{"allow":["GET","PUT"]}},"rules":{"href":"https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules","hints":{"allow":["GET","POST"]}}},"type":"IDP_DISCOVERY"}]'
+  recorded_at: Fri, 11 Apr 2025 03:48:15 GMT
+recorded_with: VCR 6.0.0

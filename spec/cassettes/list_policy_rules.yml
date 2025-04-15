@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Oktakit v1.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - SSWS <<ACCESS_TOKEN>>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 11 Apr 2025 05:14:55 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      vary:
+      - Accept-Encoding
+      x-okta-request-id:
+      - 7a69e3aa1ff6b215fcfc117d1b84b990
+      x-xss-protection:
+      - '0'
+      p3p:
+      - CP="HONK"
+      x-rate-limit-limit:
+      - '500'
+      x-rate-limit-remaining:
+      - '499'
+      x-rate-limit-reset:
+      - '1744348555'
+      cache-control:
+      - no-cache, no-store
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      accept-ch:
+      - Sec-CH-UA-Platform-Version
+      x-content-type-options:
+      - nosniff
+      strict-transport-security:
+      - max-age=315360000; includeSubDomains
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '[{"id":"0prijwtsl7sqdJQiy1d7","status":"ACTIVE","name":"Default Rule","priority":6,"created":"2024-11-21T22:32:22.000Z","lastUpdated":"2025-04-11T04:27:15.000Z","system":true,"conditions":{"network":{"connection":"ANYWHERE"},"platform":{"include":[],"exclude":[]},"userIdentifier":{"patterns":[]},"app":{"include":[],"exclude":[]}},"actions":{"idp":{"providers":[{"type":"OKTA"}],"idpSelectionType":"SPECIFIC"}},"_links":{"self":{"href":"https://okta-test.okta.com/api/v1/policies/00pijwtasdfz4JsuA1d7/rules/0prijwtsl7sqdJQiy1d7","hints":{"allow":["GET","PUT"]}}},"type":"IDP_DISCOVERY"}]'
+  recorded_at: Fri, 11 Apr 2025 05:14:55 GMT
+recorded_with: VCR 6.0.0
