@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://okta-test.okta.com/api/v1/mappings/aprofilemappingid
+    body:
+      encoding: UTF-8
+      string: '{"properties":{"email":{"expression":"appuser.subjectNameId","pushStatus":"DONT_PUSH"}}}'
+    headers:
+      User-Agent:
+      - Oktakit v0.3.3
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - SSWS <<ACCESS_TOKEN>>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 30 Apr 2025 05:18:48 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      vary:
+      - Accept-Encoding
+      x-okta-request-id:
+      - 3fa5460530872563666978976a5aeed3
+      x-xss-protection:
+      - '0'
+      p3p:
+      - CP="HONK"
+      set-cookie:
+      - sid="";Version=1;Path=/;Max-Age=0, xids="";Version=1;Path=/;Max-Age=0, autolaunch_triggered="";
+        Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/, activate_ca_modal_triggered="";
+        Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/, JSESSIONID=hi;
+        Path=/; Secure; HttpOnly
+      x-rate-limit-limit:
+      - '500'
+      x-rate-limit-remaining:
+      - '499'
+      x-rate-limit-reset:
+      - '1745990388'
+      cache-control:
+      - no-cache, no-store
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      accept-ch:
+      - Sec-CH-UA-Platform-Version
+      x-content-type-options:
+      - nosniff
+      strict-transport-security:
+      - max-age=315360000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"id":"aprofilemappingid","source":{"id":"aprofilesourceid","name":"saml_idp","type":"appuser","_links":{"self":{"href":"https://okta-test.okta.com/api/v1/apps/aprofilesourceid"},"schema":{"href":"https://okta-test.okta.com/api/v1/meta/schemas/apps/aprofilesourceid/default"}}},"target":{"id":"aprofiletargetid","name":"user","type":"user","_links":{"self":{"href":"https://okta-test.okta.com/api/v1/meta/types/user/aprofiletargetid"},"schema":{"href":"https://okta-test.okta.com/api/v1/meta/schemas/user/auserschemaid"}}},"properties":{"firstName":{"expression":"source.firstName","pushStatus":"DONT_PUSH"},"lastName":{"expression":"source.lastName","pushStatus":"DONT_PUSH"},"email":{"expression":"appuser.subjectNameId","pushStatus":"DONT_PUSH"},"mobilePhone":{"expression":"source.mobilePhone","pushStatus":"DONT_PUSH"},"login":{"expression":"source.userName","pushStatus":"DONT_PUSH"}},"_links":{"self":{"href":"https://okta-test.okta.com/api/v1/mappings/aprofilemappingid"}}}'
+  recorded_at: Wed, 30 Apr 2025 05:18:47 GMT
+recorded_with: VCR 6.0.0
