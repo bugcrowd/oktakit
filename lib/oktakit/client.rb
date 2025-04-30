@@ -9,6 +9,7 @@ require 'oktakit/client/group_rules'
 require 'oktakit/client/identity_providers'
 require 'oktakit/client/policies'
 require 'oktakit/client/policy_rules'
+require 'oktakit/client/profile_mappings'
 require 'oktakit/client/schemas'
 require 'oktakit/client/templates'
 require 'oktakit/client/users'
@@ -24,6 +25,7 @@ module Oktakit
     include IdentityProviders
     include Policies
     include PolicyRules
+    include ProfileMappings
     include Schemas
     include Templates
     include Users
