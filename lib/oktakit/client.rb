@@ -1,6 +1,7 @@
 require 'sawyer'
 require 'oktakit/response/raise_error'
 require 'oktakit/client/admin_roles'
+require 'oktakit/client/authenticators'
 require 'oktakit/client/apps'
 require 'oktakit/client/events'
 require 'oktakit/client/factors'
