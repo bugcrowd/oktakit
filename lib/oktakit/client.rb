@@ -18,6 +18,7 @@ module Oktakit
   class Client
     include AdminRoles
     include Apps
+    include Authenticators
     include Events
     include Factors
     include Groups
