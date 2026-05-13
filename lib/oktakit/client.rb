@@ -185,9 +185,7 @@ module Oktakit
       uri = URI::DEFAULT_PARSER.escape("/api/v1" + path.to_s)
       @last_response = resp = sawyer_agent.call(method, uri, data, options)
 
-      response = [resp.data, resp.status]
-      response << absolute_to_relative_url(resp.rels[:next]) if paginate
-      response
+      [resp.data, resp.status, paginate ? absolute_to_relative_url(resp.rels[:next]) : nil]
     end
 
     def sawyer_agent
